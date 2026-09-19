@@ -1,24 +1,31 @@
-# Configurator.Build — Showcase Deploy
+# Configurator.Build — Deploy
 
-Live: GitHub Pages (do not attach configurator.build — that hostname is an unrelated AWS Next.js app).
+Gallery: PEMB, Post Frame (was Econo), LumberCladding, LGSF-OS coming soon.
+WCBS Configurator and WCBS PostFrame are removed.
 
-## Repo
-- Owner: yegwitty-max
-- Name: configurator-build
-- Public
-- Branch: master
+Do not bind configurator.build — that hostname is an unrelated AWS Next.js app.
 
-## Publish
+## Live now (GitHub Pages)
+
+https://yegwitty-max.github.io/configurator-build/
+Repo: https://github.com/yegwitty-max/configurator-build
+
+## Cloudflare Pages (created, first upload pending)
+
+Project: configurator-build
+Account: fa37875d2f3c2cc1347b7ae709cbd6e6 (Yegwitty)
+Target: https://configurator-build.pages.dev/
+
+This host times out on POST /pages/assets/upload (ETIMEDOUT). Project create succeeded.
+From a clean network:
+
 ```bash
 cd /home/mre/Desktop/configurator-showcase
-gh repo create yegwitty-max/configurator-build --public --source=. --remote=origin --push
-gh api repos/yegwitty-max/configurator-build/pages -X POST -f 'source[branch]=master' -f 'source[path]=/'
+rm -rf dist && mkdir dist
+cp index.html dist/ && cp -r 001-industrial-tactile 002-editorial 003-awwwards-grade dist/
+CLOUDFLARE_API_TOKEN=… wrangler pages deploy dist --project-name configurator-build --branch master
 ```
 
-Site: https://yegwitty-max.github.io/configurator-build/
+Or Cloudflare dashboard → Workers & Pages → configurator-build → Direct Upload.
 
-## Files
-- `/` variant picker
-- `001-industrial-tactile/` ForgeFrame brand
-- `002-editorial/` serif / white space
-- `003-awwwards-grade/` dark immersive (featured, includes LGSF-OS coming soon)
+Post Frame demo still at https://econo.vercel.app/design until that app is moved off Vercel.
