@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Configurator.Build — Showcase</title>
+  <title>Configurator.Build — ForgeFrame PEMB OS</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,35 +11,67 @@
   <style>
     body { font-family: Inter, sans-serif; background: #050505; color: #fff; }
     .serif { font-family: "Playfair Display", serif; }
-    a.card { transition: transform .2s, border-color .2s; }
+    a.card, .card { transition: transform .2s, border-color .2s; }
     a.card:hover { transform: translateY(-4px); border-color: #FF6B35; }
   </style>
 </head>
 <body class="antialiased min-h-screen">
-  <main class="max-w-5xl mx-auto px-6 py-20">
-    <p class="text-xs uppercase tracking-[0.3em] text-[#FF6B35]">ForgeFrame</p>
+  <main class="max-w-6xl mx-auto px-6 py-16">
+    <p class="text-xs uppercase tracking-[0.3em] text-[#FF6B35]">ForgeFrame · Cloudflare</p>
     <h1 class="serif text-4xl md:text-6xl mt-4">Configurator.Build</h1>
     <p class="mt-4 max-w-2xl text-gray-400">
-      Three marketing-site directions for construction 3D configurators — sales tools, CRM handoff, project tracking. No engineering claims.
+      Construction 3D configurators. Sales tools, CRM handoff, project tracking. No engineering claims.
     </p>
-    <div class="mt-14 grid gap-6 md:grid-cols-3">
-      <a class="card block rounded-xl border border-white/10 p-6 bg-white/[0.03]" href="./003-awwwards-grade/">
-        <p class="text-xs uppercase tracking-wider text-[#FF6B35]">Featured</p>
-        <h2 class="mt-3 text-xl font-semibold">Awwwards-grade</h2>
-        <p class="mt-2 text-sm text-gray-400">Dark immersive hero. Live gallery + LGSF-OS coming soon.</p>
+
+    <!-- PEMB OS featured -->
+    <section class="mt-12 rounded-2xl border border-[#FF6B35]/40 bg-gradient-to-br from-[#FF6B35]/15 to-white/[0.03] p-8 md:p-12">
+      <p class="text-xs uppercase tracking-[0.25em] text-[#FF6B35]">Featured · Top</p>
+      <h2 class="serif text-3xl md:text-5xl mt-3">ForgeFrame PEMB OS</h2>
+      <p class="mt-4 max-w-2xl text-gray-300">
+        Pre-engineered metal buildings. Photoreal path-traced WebGL, lead capture, CRM, manufacturer handoff, project management.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="./003-awwwards-grade/#gallery" class="inline-block px-6 py-3 bg-[#FF6B35] text-black font-semibold uppercase tracking-wider rounded-md hover:bg-[#ff8555]">
+          Open gallery
+        </a>
+        <a href="./001-industrial-tactile/#gallery" class="inline-block px-6 py-3 border border-white/20 font-semibold uppercase tracking-wider rounded-md hover:border-[#FF6B35]">
+          Industrial variant
+        </a>
+      </div>
+    </section>
+
+    <!-- All others -->
+    <h3 class="mt-16 text-xs uppercase tracking-[0.25em] text-gray-500">All configurators</h3>
+    <div class="mt-6 grid gap-6 md:grid-cols-3">
+      <a class="card block rounded-xl border border-[#FF6B35]/50 p-6 bg-[#FF6B35]/10" href="./003-awwwards-grade/#gallery">
+        <p class="text-xs uppercase tracking-wider text-[#FF6B35]">01 · Featured</p>
+        <h2 class="mt-3 text-xl font-semibold">ForgeFrame PEMB OS</h2>
+        <p class="mt-2 text-sm text-gray-400">Rigid-frame metal buildings. Path-traced WebGL, CRM, handoff.</p>
       </a>
-      <a class="card block rounded-xl border border-white/10 p-6 bg-white/[0.03]" href="./001-industrial-tactile/">
-        <p class="text-xs uppercase tracking-wider text-gray-500">Variant 01</p>
-        <h2 class="mt-3 text-xl font-semibold">Industrial tactile</h2>
-        <p class="mt-2 text-sm text-gray-400">ForgeFrame orange, high-contrast, lead-first.</p>
+      <a class="card block rounded-xl border border-white/10 p-6 bg-white/[0.03]" href="https://econo.vercel.app/design" target="_blank" rel="noopener">
+        <p class="text-xs uppercase tracking-wider text-gray-500">02 · Live</p>
+        <h2 class="mt-3 text-xl font-semibold">Post Frame</h2>
+        <p class="mt-2 text-sm text-gray-400">Post-frame configurator for builders and dealers. CRM handoff, lead capture.</p>
       </a>
-      <a class="card block rounded-xl border border-white/10 p-6 bg-white/[0.03]" href="./002-editorial/">
-        <p class="text-xs uppercase tracking-wider text-gray-500">Variant 02</p>
-        <h2 class="mt-3 text-xl font-semibold">Editorial</h2>
-        <p class="mt-2 text-sm text-gray-400">Serif headlines, white space, quieter sales page.</p>
-      </a>
+      <div class="card rounded-xl border border-white/10 p-6 bg-white/[0.03]">
+        <p class="text-xs uppercase tracking-wider text-gray-500">03</p>
+        <h2 class="mt-3 text-xl font-semibold">LumberCladding</h2>
+        <p class="mt-2 text-sm text-gray-400">Lumber cladding configurator. Sales workflow, project handoff. Moving off Vercel.</p>
+      </div>
+      <div class="card rounded-xl border border-white/10 p-6 bg-white/[0.03]">
+        <p class="text-xs uppercase tracking-wider text-gray-500">04 · Soon</p>
+        <h2 class="mt-3 text-xl font-semibold">LGSF-OS</h2>
+        <p class="mt-2 text-sm text-gray-400">Light-gauge steel framing. BOM/cutlists, project handoff.</p>
+      </div>
     </div>
-    <p class="mt-16 text-sm text-gray-500">sales@forgeframer.com · (587) 402-6030</p>
+
+    <p class="mt-16 text-xs uppercase tracking-[0.25em] text-gray-600">Site directions</p>
+    <div class="mt-4 flex flex-wrap gap-4 text-sm">
+      <a class="text-gray-400 hover:text-[#FF6B35]" href="./003-awwwards-grade/">Awwwards-grade</a>
+      <a class="text-gray-400 hover:text-[#FF6B35]" href="./001-industrial-tactile/">Industrial tactile</a>
+      <a class="text-gray-400 hover:text-[#FF6B35]" href="./002-editorial/">Editorial</a>
+    </div>
+    <p class="mt-10 text-sm text-gray-500">sales@forgeframer.com · (587) 402-6030</p>
   </main>
 </body>
 </html>
